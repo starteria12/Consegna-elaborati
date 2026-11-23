@@ -1,0 +1,12 @@
+[00:00.00 - 00:05.68] I've built 36 AI agents to run an entire marketing team and we're gonna see how much they can
+[00:05.68 - 00:12.56] sell in one day. Imagine it's your store. At 6am, the manager agent starts running the store.
+[00:12.56 - 00:18.24] First, it wakes up the research agent. It reads last night's comments and finds 41 people asking
+[00:18.24 - 00:22.88] the same thing about your best seller. Is it worth the price? So the content agent writes a
+[00:22.88 - 00:28.40] short video that answers it and an email to go with it. At 8, you get one page. You change
+[00:28.48 - 00:33.52] one line and approve it. Next, the inventory agent checks the stock. Only 60 left, so it
+[00:33.52 - 00:38.32] reorders from your supplier before the video goes out. All day, the support agent answers
+[00:38.32 - 00:44.08] every comment and DM and sends buyers the link. At 3pm, the ads agent wants to put your best
+[00:44.08 - 00:49.76] seller on 30% off, but the manager agent checks the margins. That discount wipes out your profit,
+[00:49.76 - 00:56.00] so it sends it back. The new offer is free shipping over $40. Approved, at 11pm,
+[00:56.00 - 01:02.48] the finance agent closes the day, 23 orders and you made two decisions. And at 6am,
+[01:02.48 - 01:07.44] tomorrow, it all starts again. Comments store and I'll send you the full blueprint for free.
