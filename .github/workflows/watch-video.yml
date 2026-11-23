@@ -1,0 +1,36 @@
+name: watch-video
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['video-queue/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: watch-video-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q -U yt-dlp faster-whisper
+      - name: Process queue
+        run: python tools/process_queue.py
+      - name: Commit results
+        run: |
+          git config user.name "watch-video-bot"
+          git config user.email "watch-video-bot@users.noreply.github.com"
+          git add video-results video-queue
+          git diff --cached --quiet && exit 0
+          git commit -m "watch-video: risultati analisi [skip ci]"
+          for i in 1 2 3 4; do git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break; sleep $((i*5)); done
