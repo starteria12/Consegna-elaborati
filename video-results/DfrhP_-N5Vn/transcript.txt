@@ -1,0 +1,23 @@
+[00:00.00 - 00:03.70] Ogni miliardario del pianeta è nel panico, perché qualcuno ha appena pubblicato una
+[00:03.70 - 00:07.96] repo su GitHub che ti fa creare un esercito di dipendenti AI e ha già più di 100.000
+[00:07.96 - 00:08.96] stelle.
+[00:08.96 - 00:12.36] Si chiama Paperclip AI, immagina di voler costruire la tua azienda di software.
+[00:12.36 - 00:16.48] Di norma ti servirebbero sviluppatori, designer, persone del marketing e qualcuno che li
+[00:16.48 - 00:17.48] gestisca tutti.
+[00:17.48 - 00:21.88] Con Paperclick invece crea un'intera organizzazione di agenti AI, una gente diventa il tuo
+[00:21.88 - 00:26.32] CEO, un altro il tuo CTO, alcuni agenti fanno gli sviluppatori e un altro segue
+[00:26.32 - 00:27.32] il marketing.
+[00:27.32 - 00:31.44] Vi dai a tutti un solo obiettivo, costruire e lanciare un app di appunti con l'AI.
+[00:31.44 - 00:36.20] E invece di dare istruzione a ogni agenti, il tuo CEO AI può dividere l'obiettivo in compiti
+[00:36.20 - 00:37.20] più piccoli.
+[00:37.20 - 00:40.24] A segnarli ai vari dipendenti AI e coordinare il loro lavoro.
+[00:40.24 - 00:41.24] Malbello arriva adesso.
+[00:41.24 - 00:44.84] Questi agenti continuano a lavorare sui compiti ricorrenti anche quando non stai
+[00:44.84 - 00:45.84] parlando con loro.
+[00:45.84 - 00:49.92] E tu controlli tutto da un'unica dashboard, i compiti, l'avanzamento, perfino quanto
+[00:49.92 - 00:51.96] spende in token ogni dipendente AI.
+[00:51.96 - 00:55.72] Puoi fissare un budget, approvare decisioni importanti e fermare gli agenti quando
+[00:55.72 - 00:56.72] serve.
+[00:56.72 - 00:59.44] Comenta con Cloud Code, Codex, Open Cloud e altri agenti AI.
+[00:59.44 - 01:01.80] L'intera piattaforma è gratis e open source.
+[01:01.80 - 01:04.88] Comenta agenti e ti mando il link e il comando per installarla.
