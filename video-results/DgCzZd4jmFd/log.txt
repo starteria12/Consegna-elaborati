@@ -1,0 +1,29 @@
+$ yt-dlp --no-playlist -f best[height<=1080]/best --write-info-json --write-subs --write-auto-subs --sub-langs all -o /tmp/DgCzZd4jmFd/video.%(ext)s https://www.instagram.com/reel/DgCzZd4jmFd/
+[Instagram] Setting up session
+[Instagram] Extracting URL: https://www.instagram.com/reel/DgCzZd4jmFd/
+[Instagram] DgCzZd4jmFd: Checking post accessibility
+[Instagram] DgCzZd4jmFd: Downloading webpage
+[info] DgCzZd4jmFd: Downloading 1 format(s): 3
+[info] There are no subtitles for the requested languages
+[info] Writing video metadata as JSON to: /tmp/DgCzZd4jmFd/video.info.json
+[download] Destination: /tmp/DgCzZd4jmFd/video.mp4
+
+[download]   0.0% of    6.59MiB at  Unknown B/s ETA Unknown
+[download]   0.0% of    6.59MiB at    2.47MiB/s ETA 00:02  
+[download]   0.1% of    6.59MiB at    4.41MiB/s ETA 00:01
+[download]   0.2% of    6.59MiB at    8.40MiB/s ETA 00:00
+[download]   0.5% of    6.59MiB at   12.38MiB/s ETA 00:00
+[download]   0.9% of    6.59MiB at   14.79MiB/s ETA 00:00
+[download]   1.9% of    6.59MiB at   24.04MiB/s ETA 00:00
+[download]   3.8% of    6.59MiB at   29.18MiB/s ETA 00:00
+[download]   7.6% of    6.59MiB at   44.32MiB/s ETA 00:00
+[download]  15.1% of    6.59MiB at   62.55MiB/s ETA 00:00
+[download]  30.3% of    6.59MiB at   66.57MiB/s ETA 00:00
+[download]  60.6% of    6.59MiB at   67.17MiB/s ETA 00:00
+[download] 100.0% of    6.59MiB at   72.11MiB/s ETA 00:00
+[download] 100% of    6.59MiB in 00:00:00 at 61.42MiB/s  
+
+$ ffmpeg -loglevel error -i /tmp/DgCzZd4jmFd/video.mp4 -vf fps=0.4115,scale=720:-2 -q:v 4 /home/runner/work/Consegna-elaborati/Consegna-elaborati/video-results/DgCzZd4jmFd/frames/f_%03d.jpg
+
+$ ffmpeg -loglevel error -y -i /tmp/DgCzZd4jmFd/video.mp4 -vn -ac 1 -ar 16000 /tmp/DgCzZd4jmFd/audio.wav
+

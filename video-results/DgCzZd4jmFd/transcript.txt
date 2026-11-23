@@ -1,0 +1,19 @@
+[00:00.00 - 00:02.56] Adesso puoi usare Code Code gratis e quasi senza limiti.
+[00:02.56 - 00:07.00] Qualcuno su GitHub ha appena creato un tool che ti regala più di 7 miliardi di token
+[00:07.00 - 00:08.80] e AI al mese gratis.
+[00:08.80 - 00:16.84] Abbiamo trovato l'epoca e questa qua è fra i LLMAPI con più di 54.000 stelle.
+[00:16.84 - 00:20.04] Solo andiamo a copiare e clonare all'interno di Cloud.
+[00:20.04 - 00:23.48] Giuro che se funziona cancello l'abbonamento di Cloud vediamolo.
+[00:23.48 - 00:26.56] Ok, sta leggendo il codice, adesso installiamo la skill.
+[00:26.96 - 00:30.52] Ci sono più di 314 modelli disponibili senza chiavi,
+[00:30.52 - 00:33.44] una sorta di centralino con tutte i AI gratuite.
+[00:33.44 - 00:34.48] Ok, andiamo a provare.
+[00:34.48 - 00:37.92] Ora vediamo se dobbiamo cancellare Cloud Code oppure no.
+[00:37.92 - 00:42.28] Abbiamo fatto scrivere due mail, una da free LLMAPI e l'altra con Cloud.
+[00:42.28 - 00:46.28] Come vedete sono molto simili, diciamo che Opus è un po' più corretto in questo caso.
+[00:46.28 - 00:52.72] Abbiamo vettato i token con Cloud a circa 300 e invece qua a 403.
+[00:52.72 - 00:56.12] Il costo ovviamente di qua è stato zero utilizzando la skill.
+[00:56.12 - 01:01.32] Invece per quanto riguarda quella da usata da Cloud abbiamo circa 0,0044 dollari.
+[01:01.32 - 01:05.92] Questa richiesta è finita su Kilo che è un fornitore che ha destra modelli su pronto.
+[01:05.92 - 01:09.32] Attenzione ai dati e ai dati dei vostri clienti soprattutto.
+[01:09.32 - 01:12.76] Però devo dire che secondo me è figata.
