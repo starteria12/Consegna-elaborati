@@ -1,0 +1,4 @@
+[00:01.71 - 00:09.67] What the fuck go to Claude and click customize click add custom connector open this chrome extension called ultimate web scraper
+[00:09.99 - 00:15.83] Copy this URL and paste it into Claude with this tool Claude can now scrape any website
+[00:15.83 - 00:21.37] So you just give it a link and it will scan the entire catalog and give you all the product data
+[00:21.87 - 00:24.95] Including the images and then of course you can export it
