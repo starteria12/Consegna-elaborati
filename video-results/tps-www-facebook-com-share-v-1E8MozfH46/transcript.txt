@@ -1,0 +1,343 @@
+[00:00.00 - 00:03.00] You have definitely seen these documentary-style videos
+[00:03.00 - 00:05.70] getting millions of views all over YouTube.
+[00:05.70 - 00:07.30] And I know something about you.
+[00:07.30 - 00:09.30] Every time you watched one of those videos,
+[00:09.30 - 00:11.00] you secretly admired it.
+[00:11.00 - 00:13.00] And somewhere in the back of your mind, you thought,
+[00:13.00 - 00:15.20] I wish I could make something like this.
+[00:15.20 - 00:18.80] But the moment that thought came, another one followed right after.
+[00:18.80 - 00:20.80] This takes years of experience.
+[00:20.80 - 00:25.00] A professional editing team, mastery over Premiere Pro and After Effects.
+[00:25.00 - 00:26.60] And I have none of that.
+[00:26.60 - 00:28.20] I completely understand.
+[00:28.20 - 00:31.70] But today, I am going to prove that thought completely wrong.
+[00:31.70 - 00:35.10] Because I am going to show you how to create these exact videos
+[00:35.10 - 00:37.10] using nothing but Claude code.
+[00:37.10 - 00:38.60] No manual editing at all.
+[00:38.60 - 00:41.10] No expensive image or video generators.
+[00:41.10 - 00:42.60] No MCP tools.
+[00:42.60 - 00:46.30] And even if you have never used a single AI tool in your life,
+[00:46.30 - 00:48.30] this video is going to be so simple
+[00:48.30 - 00:50.80] that anyone can learn this in a single go.
+[00:50.80 - 00:52.90] To automate all of this inside Claude,
+[00:52.90 - 00:55.10] I built an advanced plugin myself.
+[00:55.10 - 00:58.10] I spent hours training Claude on this exact style
+[00:58.20 - 01:02.00] so that the entire process runs on complete autopilot for you.
+[01:02.00 - 01:04.10] And I have seen quite a few gurus out there
+[01:04.10 - 01:05.50] locking these kinds of plugins
+[01:05.50 - 01:07.90] behind paid school community subscriptions
+[01:07.90 - 01:09.00] just to access them.
+[01:09.00 - 01:11.70] But I am giving this to you completely free.
+[01:11.70 - 01:14.10] All I want in return is for you to watch this video
+[01:14.10 - 01:16.90] till the end so you do not miss any important detail.
+[01:16.90 - 01:19.20] And if this helps you, make sure to like the video
+[01:19.20 - 01:20.60] and subscribe to the channel.
+[01:20.60 - 01:22.20] Now, before we get into anything,
+[01:22.20 - 01:25.10] I am going to show you a full documentary style video
+[01:25.10 - 01:27.80] that I made myself using only Claude.
+[01:27.90 - 01:30.80] Without touching any video editor even once,
+[01:30.80 - 01:32.70] completely on autopilot.
+[01:32.70 - 01:33.40] Let's begin.
+[01:33.40 - 01:34.50] Dusk.
+[01:34.50 - 01:38.00] A steam train rattles through the fields outside Lucknow.
+[01:38.00 - 01:39.10] In one carriage,
+[01:39.10 - 01:41.60] a young man reaches for the alarm chain.
+[01:41.60 - 01:42.70] He pulls.
+[01:42.70 - 01:44.30] Brakes scream.
+[01:44.30 - 01:47.70] The train shudders to a halt near a village called Kakori
+[01:47.70 - 01:50.60] and 10 men step down into the dark.
+[01:50.60 - 01:51.90] To understand why,
+[01:51.90 - 01:53.50] we have to go back.
+[01:53.50 - 01:54.30] India.
+[01:54.30 - 01:56.00] 1925.
+[01:56.00 - 01:59.80] The British Raj rules over 300 million people.
+[01:59.80 - 02:02.60] Gandhi has called off his great protest movement.
+[02:02.60 - 02:05.90] For many young Indians, patience has run out.
+[02:05.90 - 02:07.20] In Shah Jahanpur,
+[02:07.20 - 02:09.20] a poet named Ram Plasad Bismal
+[02:09.20 - 02:11.50] believes freedom will need guns
+[02:11.50 - 02:13.40] and guns need money.
+[02:13.40 - 02:15.50] His closest friend is Ashwakula Khan.
+[02:15.50 - 02:16.30] All right guys,
+[02:16.30 - 02:18.10] when you are inside Claude,
+[02:18.10 - 02:19.40] on the side panel,
+[02:19.40 - 02:21.40] if it's your first time using Claude code,
+[02:21.40 - 02:23.30] you will see code in the list.
+[02:23.30 - 02:24.20] And if it's not there,
+[02:24.30 - 02:26.60] you will have the option to switch to it from here.
+[02:26.60 - 02:28.20] Now we are in Claude code.
+[02:28.20 - 02:29.00] That's simple.
+[02:29.00 - 02:30.10] From this option here,
+[02:30.10 - 02:32.80] you can either select local or cloud.
+[02:32.80 - 02:34.90] The difference between local and cloud
+[02:34.90 - 02:37.00] is something you must understand.
+[02:37.00 - 02:38.30] If you go with local,
+[02:38.30 - 02:41.30] first you will have to install the desktop version of Claude
+[02:41.30 - 02:44.10] and then Claude will have to install everything it needs
+[02:44.10 - 02:46.80] for video creation directly in your system.
+[02:46.80 - 02:48.70] And you must also have a good system
+[02:48.70 - 02:50.30] with a dedicated graphics card
+[02:50.30 - 02:51.60] for that to work properly.
+[02:51.60 - 02:53.20] But if you go with cloud,
+[02:53.20 - 02:56.40] Claude code will not download anything on your computer.
+[02:56.40 - 02:59.50] It will create a temporary container in its own workspace
+[02:59.50 - 03:01.30] provided by Anthropic itself
+[03:01.30 - 03:04.50] and install everything inside that temporary container.
+[03:04.50 - 03:07.90] This not only avoids unnecessary file buildup in your system,
+[03:07.90 - 03:09.50] but also lets you make videos
+[03:09.50 - 03:11.10] even on a low end system
+[03:11.10 - 03:12.10] and your mobile.
+[03:12.10 - 03:14.30] That is literally so cool.
+[03:14.30 - 03:16.10] You can make it even on your phone.
+[03:16.10 - 03:17.00] What else do you need?
+[03:17.00 - 03:18.10] John Wick's pen?
+[03:18.10 - 03:19.70] You do not need his pen,
+[03:19.70 - 03:22.20] but you definitely need my expert advice
+[03:22.20 - 03:24.40] that no guru will ever tell you.
+[03:24.40 - 03:26.50] But I will tell you in this video
+[03:26.50 - 03:30.00] and it will literally save more than 60% of your session.
+[03:30.00 - 03:32.70] You will be able to make more videos on the pro plan
+[03:32.70 - 03:35.10] than most people make on Macs or Ultra.
+[03:35.10 - 03:36.60] Yeah, I'm not bluffing.
+[03:36.60 - 03:37.60] Just stay with me.
+[03:37.60 - 03:39.40] All right, getting back to Claude code.
+[03:39.40 - 03:40.70] From the plus icon,
+[03:40.70 - 03:42.40] you need to upload the zip pack
+[03:42.40 - 03:44.30] and make sure to write this prompt.
+[03:44.30 - 03:46.20] You do not need to write it manually.
+[03:46.20 - 03:47.00] In the document,
+[03:47.00 - 03:49.10] you will also get this extraction prompt.
+[03:49.10 - 03:50.20] Once you hit enter,
+[03:50.20 - 03:52.70] Claude code is going to install everything it needs
+[03:52.70 - 03:55.30] for video creation completely on its own
+[03:55.30 - 03:58.20] and it literally takes only five to seven minutes.
+[03:58.20 - 03:58.80] After that,
+[03:58.80 - 04:01.40] your complete automation setup will be in front of you.
+[04:01.40 - 04:02.40] In stage one,
+[04:02.40 - 04:04.60] it is going to provide you a list of topics
+[04:04.60 - 04:05.70] that you can choose from.
+[04:05.70 - 04:07.50] In case you do not like any topic,
+[04:07.50 - 04:09.30] you can ask for a fresh list.
+[04:09.30 - 04:10.70] Once you select the topic,
+[04:10.70 - 04:12.30] the next thing Claude is going to do
+[04:12.30 - 04:14.20] is research your selected topic,
+[04:14.20 - 04:15.50] dates, events,
+[04:15.50 - 04:16.80] all the characters involved.
+[04:16.80 - 04:19.00] Since we are doing documentary style content
+[04:19.00 - 04:20.60] with real facts and incidents,
+[04:20.60 - 04:23.50] like how World War Two started and similar topics,
+[04:23.50 - 04:25.80] Claude code needs a full research brief
+[04:25.80 - 04:27.80] so it does not hallucinate in between.
+[04:27.80 - 04:29.30] Once the research is done,
+[04:29.30 - 04:30.70] before writing the script,
+[04:30.70 - 04:32.80] it will ask you the length of your video.
+[04:32.80 - 04:34.70] If you cannot find your specific length
+[04:34.70 - 04:36.70] in the list Claude code provides,
+[04:36.70 - 04:39.00] you can type your own specific video length.
+[04:39.00 - 04:40.70] Then Claude is going to write you
+[04:40.70 - 04:43.90] a highly engaging, properly researched script.
+[04:43.90 - 04:44.90] In the next stage,
+[04:44.90 - 04:47.30] it will write you a list of images it needs from you
+[04:47.30 - 04:49.50] for creating the perfect video.
+[04:49.50 - 04:51.90] If some images can be generated with AI,
+[04:51.90 - 04:53.80] it will write the prompts for those images.
+[04:53.80 - 04:56.50] And using either chat GPT or Google Flow,
+[04:56.50 - 04:57.80] you can easily make them.
+[04:57.80 - 05:00.20] If some images can be downloaded from the web,
+[05:00.20 - 05:02.20] it will provide you full search terms.
+[05:02.20 - 05:03.60] So you just need to copy them,
+[05:03.60 - 05:04.60] paste them in Google,
+[05:04.60 - 05:05.90] head to the images section,
+[05:05.90 - 05:07.90] and download your specific image.
+[05:07.90 - 05:10.30] This step saves you from hours of struggle
+[05:10.30 - 05:12.90] where you would have to manually look up images yourself
+[05:12.90 - 05:15.90] in Pinterest, Wikipedia, Google, and so on.
+[05:15.90 - 05:18.50] Don't you think I deserve a like and a motivating comment
+[05:18.50 - 05:19.50] for my efforts?
+[05:19.50 - 05:22.90] Alright, so once you have collected all of your material,
+[05:22.90 - 05:26.60] the sad part is that you cannot upload it all in a single go
+[05:26.60 - 05:28.90] because there is a limit to the number of attachments
+[05:28.90 - 05:31.20] you can send in Claude per message.
+[05:31.20 - 05:33.50] But I have trained Claude code perfectly
+[05:33.50 - 05:35.10] for this situation as well.
+[05:35.10 - 05:35.90] With the zip pack,
+[05:35.90 - 05:39.00] you can easily attach as many images as possible,
+[05:39.00 - 05:41.80] write, wait for next pack of images and material,
+[05:41.80 - 05:42.90] and keep repeating that
+[05:42.90 - 05:45.30] until you have uploaded all of your images.
+[05:45.30 - 05:47.40] Then when you specifically tell Claude
+[05:47.40 - 05:49.10] to start creating the video,
+[05:49.10 - 05:51.10] only then will it begin production.
+[05:51.10 - 05:53.50] Until then, it will just create a separate folder
+[05:53.50 - 05:56.40] in its database and store all of your images there.
+[05:56.40 - 05:57.50] One important thing,
+[05:57.50 - 05:59.90] make sure to name each image you download
+[05:59.90 - 06:01.40] or generate with AI
+[06:01.40 - 06:04.10] using exactly the name Claude provided you.
+[06:04.10 - 06:04.90] This is optional,
+[06:04.90 - 06:07.90] but we'll make it easy for Claude to identify your images
+[06:07.90 - 06:10.00] and we'll save you a lot of session time.
+[06:10.00 - 06:12.70] But that was not the main advice I was talking about.
+[06:12.70 - 06:14.00] I will get to that in a moment.
+[06:14.00 - 06:16.00] First, we need to generate our voiceover
+[06:16.00 - 06:18.30] before Claude begins video creation.
+[06:18.30 - 06:19.30] For the voiceover,
+[06:19.30 - 06:22.80] copy your script and use any voiceover generator to make it.
+[06:22.80 - 06:24.40] Once you have your voiceover ready,
+[06:24.40 - 06:26.30] simply upload it in Claude.
+[06:26.30 - 06:29.00] If your voiceover is long and you have it in parts,
+[06:29.00 - 06:33.20] just name each part 1, 2, 3, and so on in sequence
+[06:33.20 - 06:35.40] and tell Claude code that you have the voiceover
+[06:35.40 - 06:37.90] in multiple parts named in sequence.
+[06:37.90 - 06:39.30] Along with the voiceover,
+[06:39.30 - 06:41.20] paste the script in the chat as well
+[06:41.20 - 06:44.10] and ask Claude to start video creation.
+[06:44.10 - 06:45.70] Now your work here is done.
+[06:45.70 - 06:48.00] Everything else is on Claude to create.
+[06:48.00 - 06:49.40] Now if you really want to know
+[06:49.40 - 06:52.40] how you can save more than 60% of your session,
+[06:52.40 - 06:53.70] pay close attention.
+[06:53.70 - 06:57.00] Make sure to use one chat for making just one video
+[06:57.00 - 06:58.10] and for the next video,
+[06:58.10 - 06:59.40] move to a new chat
+[06:59.40 - 07:02.00] and again provide Claude code the zip folder.
+[07:02.00 - 07:02.60] Why?
+[07:02.60 - 07:05.40] Because as the chat keeps getting longer and longer,
+[07:05.40 - 07:08.00] Claude has to read the entire chat history
+[07:08.00 - 07:09.70] along with your latest message.
+[07:09.70 - 07:13.10] So yes, that keeps multiplying the token costs.
+[07:13.10 - 07:15.90] Yes, that means you are paying for your current command
+[07:15.90 - 07:18.40] as well as the entire previous history.
+[07:18.40 - 07:21.00] And with models like Opus 5.5 Medium,
+[07:21.00 - 07:23.60] which I am using right now for making this video,
+[07:23.60 - 07:25.60] it will drink all of your session time
+[07:25.60 - 07:28.60] in a single message if the chat history is too long.
+[07:28.60 - 07:30.70] Besides that, as the chat gets long,
+[07:30.70 - 07:33.20] Claude starts forgetting your previous details
+[07:33.20 - 07:35.50] and only gets a summary of the conversation.
+[07:35.50 - 07:37.20] So it is pretty useless.
+[07:37.20 - 07:39.30] Creating a new chat for every video
+[07:39.30 - 07:42.50] not only saves 60 to 70% of your session time,
+[07:42.50 - 07:44.70] but also maintains the same quality
+[07:44.70 - 07:46.90] since everything is already in the pack
+[07:46.90 - 07:49.10] and you get to generate way more minutes
+[07:49.10 - 07:50.10] than other people.
+[07:50.10 - 07:52.90] In the meantime, Claude has also made our video.
+[07:52.90 - 07:56.40] I used Opus 5.5 Medium for making this video
+[07:56.40 - 07:59.50] because it is a good balance of cost and quality.
+[07:59.50 - 08:01.90] Dusk, a steam train rattles
+[08:01.90 - 08:04.10] through the fields outside Lucknow.
+[08:04.10 - 08:07.60] In one carriage, a young man reaches for the alarm chain.
+[08:07.60 - 08:10.40] He pulls, breaks, scream.
+[08:10.40 - 08:13.80] The train shutters to a halt near a village called Kokori
+[08:13.80 - 08:16.60] and 10 men step down into the dark.
+[08:16.60 - 08:19.50] To understand why, we have to go back.
+[08:19.50 - 08:22.00] India, 1925.
+[08:22.00 - 08:25.80] The British Raj rules over 300 million people.
+[08:25.80 - 08:28.60] Gandhi has called off his great protest movement.
+[08:28.60 - 08:31.90] For many young Indians, patience has run out.
+[08:31.90 - 08:35.20] In Shahjahanpur, a poet named Ram Prasad Vismul
+[08:35.20 - 08:37.50] believes freedom will need guns
+[08:37.50 - 08:39.40] and guns need money.
+[08:39.40 - 08:41.90] His closest friend is Ashwakula Khan,
+[08:41.90 - 08:43.90] one Hindu, one Muslim.
+[08:43.90 - 08:46.20] Brothers in everything but blood.
+[08:46.20 - 08:47.30] Their secret group,
+[08:47.30 - 08:49.50] the Hindustan Republican Association,
+[08:49.50 - 08:51.20] has a daring plan.
+[08:51.20 - 08:54.20] Every evening, this train carries government money
+[08:54.20 - 08:57.00] locked in an iron chest in the guards' van.
+[08:57.00 - 08:59.10] Money taken from Indians.
+[08:59.10 - 09:01.30] So why not take it back?
+[09:01.30 - 09:04.40] The day before, they missed this train by 10 minutes.
+[09:04.40 - 09:06.70] This time, they are on board.
+[09:06.70 - 09:09.00] On the track, the men move fast.
+[09:09.00 - 09:10.80] They hold the guard at gunpoint.
+[09:10.80 - 09:13.40] They drag the iron chest onto the ground.
+[09:13.40 - 09:14.90] It will not open.
+[09:14.90 - 09:17.50] Hammers rise and fall in the dark.
+[09:17.50 - 09:19.40] Then, a gunshot.
+[09:19.40 - 09:21.40] A passenger, Ahmad Ali,
+[09:21.40 - 09:23.40] had stepped down to find his wife.
+[09:23.40 - 09:25.80] A pistol went off in nervous hands.
+[09:25.80 - 09:27.00] He was killed.
+[09:27.00 - 09:28.20] It was an accident.
+[09:28.20 - 09:30.70] But now, the robbery had a body.
+[09:30.70 - 09:33.50] Within minutes, the gang melts into the night.
+[09:33.50 - 09:34.40] The haul?
+[09:34.40 - 09:36.30] Just a few thousand rupees.
+[09:36.30 - 09:39.40] Even today, sources disagree on the exact sum.
+[09:39.40 - 09:41.80] But the empire was not counting rupees.
+[09:41.80 - 09:43.60] It was counting faces.
+[09:43.60 - 09:46.20] Seven weeks later, the police strike.
+[09:46.20 - 09:48.60] Dozens are arrested across the province.
+[09:48.60 - 09:49.80] Some break.
+[09:49.80 - 09:53.20] Two men turn approver and testify against their friends.
+[09:53.20 - 09:55.80] Ashfakula runs for more than a year.
+[09:55.80 - 09:58.80] In Delhi, someone he trusts gives him away.
+[09:58.80 - 09:59.80] The verdict?
+[09:59.80 - 10:01.80] Death for four men.
+[10:01.80 - 10:03.80] Bismil, Ashfakula,
+[10:03.80 - 10:05.00] Rajendra Lahiri,
+[10:05.00 - 10:06.50] the man who pulled the chain,
+[10:06.50 - 10:07.70] and Roshan Singh,
+[10:07.70 - 10:09.70] who is not even at Kokori.
+[10:09.70 - 10:12.30] Only Chandrasekhar Azad slips the net.
+[10:12.30 - 10:13.80] He is never caught.
+[10:13.80 - 10:17.30] In their cells, they write poems and last letters.
+[10:17.30 - 10:19.60] December, 1927.
+[10:19.60 - 10:22.00] Four jails, four nooses.
+[10:22.00 - 10:24.30] Lahiri goes first, at Gonda.
+[10:24.30 - 10:26.60] Two days later, the others follow.
+[10:26.60 - 10:28.10] Bismil in Gorakhpur,
+[10:28.10 - 10:31.20] still writing his life story days before the end.
+[10:31.20 - 10:33.20] Roshan Singh in Allahabad,
+[10:33.20 - 10:35.40] and Ashfakula in Faisabad.
+[10:35.40 - 10:37.00] A Hindu and a Muslim
+[10:37.00 - 10:40.20] hanged on the same day for the same dream.
+[10:40.20 - 10:42.80] They took a few thousand rupees from a train.
+[10:42.80 - 10:45.80] The empire took four lives in return.
+[10:45.80 - 10:48.40] Twenty years later, the Raj was gone.
+[10:48.40 - 10:50.40] The men of Kokori never saw it.
+[10:50.40 - 10:54.30] But India never forgot the night they pulled the chain.
+[10:54.30 - 10:56.90] Guys, that was absolutely crazy.
+[10:56.90 - 10:59.20] Someone like me would be losing their mind
+[10:59.20 - 11:00.70] if I had to do this manually.
+[11:00.70 - 11:02.80] Because, first of all, animations like this
+[11:02.80 - 11:05.40] are not possible at all in CapCut.
+[11:05.40 - 11:09.00] You definitely need After Effects and Premiere Pro on PC
+[11:09.00 - 11:12.20] and Alight Motion plus hours of effort on mobile.
+[11:12.20 - 11:15.90] And still, the results would not be half of what Claude code made.
+[11:15.90 - 11:18.00] The video was close to perfect.
+[11:18.00 - 11:19.60] But if you need any revisions,
+[11:19.60 - 11:22.30] you can ask Claude what you want improved or changed.
+[11:22.30 - 11:25.00] Color grading, sound effects, transitions,
+[11:25.00 - 11:27.20] motion, or anything that feels off.
+[11:27.20 - 11:30.30] And it will not create the entire video from scratch.
+[11:30.30 - 11:33.30] That means it does not have to write pages of code again.
+[11:33.30 - 11:35.60] It will only do the necessary fixes,
+[11:35.60 - 11:38.20] which will again save a lot of your session time
+[11:38.20 - 11:40.90] and you will get a perfect version.
+[11:40.90 - 11:44.50] One thing I want to point out is that with Opus 5.5,
+[11:44.50 - 11:48.20] you will not be able to make a 10-minute video in a single go.
+[11:48.20 - 11:50.30] And attempting it is risky as well.
+[11:50.30 - 11:53.20] Because if your five-hour session limit ends in between,
+[11:53.20 - 11:55.70] your entire video can get corrupted
+[11:55.70 - 11:57.80] and Claude might have to make it from scratch,
+[11:57.80 - 12:00.30] which will again eat a lot of tokens.
+[12:00.30 - 12:04.10] So the best practice is to make your video in parts of two minutes.
+[12:04.10 - 12:07.00] You can generate your voiceover in short two-minute parts,
+[12:07.00 - 12:08.40] break the script accordingly,
+[12:08.40 - 12:10.80] and provide Claude one part at a time.
+[12:10.80 - 12:13.70] You can even tell it that to keep the video creation safe,
+[12:13.70 - 12:17.00] you will provide each part of your voiceover one at a time.
+[12:17.00 - 12:18.40] And when all parts are ready,
+[12:18.40 - 12:21.50] you can simply put them together in CapCut and export.
+[12:21.50 - 12:22.70] That is it.
+[12:22.70 - 12:24.90] No guru will ever tell you this.
+[12:24.90 - 12:26.90] They only give surface-level information
+[12:26.90 - 12:30.70] and hide this kind of detail behind school communities and paywalls.
+[12:30.70 - 12:33.20] I have watched multiple videos on this topic,
+[12:33.20 - 12:34.80] so if I'm giving this for free,
+[12:34.80 - 12:36.90] it does not mean it is useless.
+[12:36.90 - 12:37.90] Until next time.
