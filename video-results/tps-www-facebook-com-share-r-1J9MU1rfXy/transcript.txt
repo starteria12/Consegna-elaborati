@@ -1,0 +1,15 @@
+[00:00.00 - 00:03.36] Claude just killed YouTube with a free skill that runs your channel.
+[00:03.36 - 00:07.52] It's called the YouTube agent skill, and it's actually 11 skills in one install.
+[00:07.52 - 00:10.00] So Claude gets one for every part of your channel.
+[00:10.00 - 00:13.60] It already has over 6,000 stars on GitHub, and it's completely free.
+[00:13.60 - 00:15.32] So you don't even need an API key.
+[00:15.32 - 00:18.56] Now, the cool part is that the viral skill takes the channels in your niche
+[00:18.56 - 00:22.36] and ranks every video by how far it beat that channel's normal views.
+[00:22.36 - 00:25.12] It'll also tell you which hook formula each title used.
+[00:25.12 - 00:27.44] So you just hand the best idea to the script skill.
+[00:27.44 - 00:30.88] So the moment you send that, it'll write 5 hooks from 21 formulas
+[00:30.88 - 00:33.44] and score each one before it writes the full script.
+[00:33.44 - 00:36.32] And after you post, another one reads your retention export
+[00:36.32 - 00:38.88] and tells you the exact second people left.
+[00:38.88 - 00:42.56] Setting it up is super simple because you just paste the GitHub link into Claude.
+[00:42.56 - 00:44.24] Comment guide to get the full guide.
