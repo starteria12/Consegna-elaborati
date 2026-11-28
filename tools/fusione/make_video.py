@@ -43,7 +43,7 @@ def durata(path):
     return float(run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', path]).stdout)
 
 
-def tratti_voce(voce, fino_a, soglia=-35, minimo=0.35):
+def tratti_voce(voce, fino_a, soglia=-35, minimo=0.18):
     """Tratti parlati [inizio, fine] della voce, dalle pause trovate da ffmpeg."""
     err = subprocess.run(['ffmpeg', '-hide_banner', '-t', str(fino_a), '-i', voce, '-af', f'silencedetect=noise={soglia}dB:d={minimo}', '-f', 'null', '-'],
                          text=True, capture_output=True).stderr
@@ -57,18 +57,21 @@ def tratti_voce(voce, fino_a, soglia=-35, minimo=0.35):
     return out
 
 
-def allinea(frasi, tratti):
-    """Assegna a ogni frase un gruppo consecutivo di tratti di voce, in modo che le durate siano proporzionali
-    alla lunghezza del testo (programmazione dinamica). Se ci sono piu' frasi che tratti, divide in proporzione."""
+def allinea(frasi, tratti, lam=1.5):
+    """Assegna a ogni frase un gruppo consecutivo di tratti di voce (programmazione dinamica): la durata deve essere
+    proporzionale alla lunghezza del testo, e i confini tra le frasi cadono di preferenza nelle pause piu' lunghe.
+    Se ci sono piu' frasi che tratti, divide in proporzione."""
     n, m = len(frasi), len(tratti)
     chars = [max(1, len(f)) for f in frasi]
-    parlato = sum(e - s for s, e in tratti)
     if n > m:
         t0, t1, tot, acc, out = tratti[0][0], tratti[-1][1], sum(chars), 0, []
         for c in chars:
             a = t0 + (t1 - t0) * acc / tot; acc += c; out.append([round(a, 3), round(t0 + (t1 - t0) * acc / tot, 3)])
         return out
-    rate = parlato / sum(chars)
+    rate = sum(e - s for s, e in tratti) / sum(chars)
+    gap = [0] + [tratti[j][0] - tratti[j - 1][1] for j in range(1, m)]
+    pre = [0]
+    for s, e in tratti: pre.append(pre[-1] + e - s)
     INF = float('inf')
     best = [[INF] * (m + 1) for _ in range(n + 1)]; prev = [[0] * (m + 1) for _ in range(n + 1)]
     best[0][0] = 0
@@ -76,8 +79,8 @@ def allinea(frasi, tratti):
         for j in range(i, m - (n - i) + 1):
             for k in range(i - 1, j):
                 if best[i - 1][k] == INF: continue
-                d = sum(e - s for s, e in tratti[k:j])
-                c = best[i - 1][k] + (d - rate * chars[i - 1]) ** 2
+                e = rate * chars[i - 1]
+                c = best[i - 1][k] + ((pre[j] - pre[k] - e) / max(e, 1.0)) ** 2 - (lam * gap[j] if j < m else 0)
                 if c < best[i][j]: best[i][j] = c; prev[i][j] = k
     out, j = [], m
     for i in range(n, 0, -1):
@@ -122,13 +125,23 @@ def costruisci(P, base, voce_fino):
     for k, s in enumerate(sc):
         scene[k]['t1'] = scene[k + 1]['t0'] if k + 1 < len(sc) else dur
         mz, mc = MOSSE[k % len(MOSSE)]
-        scene[k].update({'img': f'img/s{k}.jpg', 's': s.get('zoom', mz), 'neve': s.get('neve', 0), 'bufera': s.get('bufera', False)})
+        scene[k].update({'img': s.get('_img', f'img/s{k}.jpg'), 's': s.get('zoom', mz), 'neve': s.get('neve', 0), 'bufera': s.get('bufera', False)})
         scene[k]['c'] = s.get('centro', mc)
         scene[k]['c_v'] = s.get('centro_v', scene[k]['c'])
         if s.get('quadrilobo'): scene[k]['quadrilobo'] = s['quadrilobo']
         if s.get('fonte'): scene[k]['fonte'] = s['fonte']
-    tit = dict(P['titolo'], fine=round((scene[1]['t0'] if len(scene) > 1 else dur) - 0.3, 3)) if P.get('titolo') else None
-    return {'dur': dur, 'titolo': tit, 'scene': scene, 'sottotitoli': subs, 'fade_out': [round(fine_voce - 0.5, 3), round(dur - 0.1, 3)]}, T
+    tit = None
+    if P.get('titolo'):
+        fa = P['titolo'].get('fino_a_frase')
+        fine = (T[fa][0] - 0.3) if fa is not None else ((scene[1]['t0'] if len(scene) > 1 else dur) - 0.3)
+        tit = dict(P['titolo'], fine=round(fine, 3))
+    cfg = {'dur': dur, 'titolo': tit, 'scene': scene, 'sottotitoli': subs, 'fade_out': [round(fine_voce - 0.5, 3), round(dur - 0.1, 3)]}
+    if P.get('finale'):   # cartello finale degli Shorts: la domanda e il rimando al video lungo
+        F = P['finale']; d = F.get('durata', 2.5)
+        cfg['finale'] = {'domanda': F['domanda'], 'riga': F.get('riga', 'LA RISPOSTA NEL VIDEO COMPLETO SU YOUTUBE'), 't0': round(dur, 3)}
+        cfg['dur'] = round(dur + d, 3); cfg['fade_out'] = [round(cfg['dur'] - 0.6, 3), round(cfg['dur'] - 0.05, 3)]
+        scene[-1]['t1'] = cfg['dur']
+    return cfg, T
 
 
 class Silenzioso(http.server.SimpleHTTPRequestHandler):
@@ -197,19 +210,40 @@ def main():
     for k in ('voce', 'musica'):
         if P.get(k): P[k] = os.path.join(pdir, P[k])
     for s in P['scene']: s['img'] = os.path.join(pdir, s['img'])
+    if P.get('sezioni'):   # voce in piu' file: si uniscono con una pausa e ogni frase si cerca dentro la sua sezione
+        for z in P['sezioni']: z['voce'] = os.path.join(pdir, z['voce'])
+    viste = {}
+    for k, s in enumerate(P['scene']):
+        key = (s['img'], s.get('bordo', P.get('bordo', 0.03)))
+        viste.setdefault(key, f'img/i{len(viste)}.jpg'); s['_img'] = viste[key]
     nome = P.get('nome', 'video')
     out = os.path.abspath(a.out or os.path.join(pdir, 'uscita')); os.makedirs(out, exist_ok=True)
     build = os.path.join(out, f'.build_{nome}'); os.makedirs(os.path.join(build, 'img'), exist_ok=True)
     for f in ('index.html', 'lib.js', 'world.js', 'film.js', 'LICENSE-opuscar.txt'): shutil.copy(os.path.join(MOTORE, f), build)
     scarica_font(os.path.join(build, 'fonts'))
-    voce_fino = P.get('voce_fino_a') or durata(P['voce'])
+    if P.get('sezioni'):
+        pausa, frasi, tempi, off = P.get('pausa', 0.5), [], [], 0.0
+        for z in P['sezioni']:
+            dz = durata(z['voce']); fz = [re.sub(r'\[[^\]]*\]\s*', '', f).strip() for f in z['frasi']]
+            tz = allinea(fz, tratti_voce(z['voce'], dz, P.get('soglia_silenzio', -35)))
+            frasi += fz; tempi += [[round(a + off, 3), round(b + off, 3)] for a, b in tz]; off += dz + pausa
+        voce_fino = round(off - pausa, 3)
+        unita = os.path.join(build, 'voce_unita.wav'); n = len(P['sezioni']); ing, fil = [], ''
+        for i, z in enumerate(P['sezioni']):
+            ing += ['-i', z['voce']]; fil += f"[{i}:a]aresample=48000,aformat=channel_layouts=stereo" + (f",apad=pad_dur={pausa}" if i < n - 1 else '') + f"[a{i}];"
+        fil += ''.join(f'[a{i}]' for i in range(n)) + f'concat=n={n}:v=0:a=1[o]'
+        run(['ffmpeg', '-v', 'error', '-y'] + ing + ['-filter_complex', fil, '-map', '[o]', unita])
+        P.update({'voce': unita, 'frasi': frasi, 'tempi': tempi})
+    else:
+        P['frasi'] = [re.sub(r'\[[^\]]*\]\s*', '', f).strip() for f in P['frasi']]
+    voce_fino = P.get('voce_fino_a') or (voce_fino if P.get('sezioni') else durata(P['voce']))
     cfg, T = costruisci(P, build, voce_fino)
     print('frasi e tempi (s, nel video):')
     for (x, y), f in zip(T, P['frasi']): print(f'  {x:6.2f}-{y:6.2f}  {f}')
     print('scene:', ', '.join(f"{s['t0']:.2f}" for s in cfg['scene']), '| durata', cfg['dur'], 's')
-    for k, s in enumerate(P['scene']):
-        d = os.path.join(build, 'img', f's{k}.jpg')
-        prepara_immagine(s['img'], d, P.get('bordo', 0.03))
+    for (src, bordo), rel in viste.items():
+        d = os.path.join(build, rel)
+        if not os.path.exists(d): prepara_immagine(src, d, bordo)
     formati = ['16:9', '9:16'] if a.formato == 'entrambi' else [a.formato]
     srv, base = servi(build)
     try:

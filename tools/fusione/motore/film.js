@@ -144,7 +144,8 @@ function drawLabel(g, sh, t) {
   const fs = 48 * S;
   g.save(); g.globalAlpha = a; g.font = `${fs}px Uncial`; g.textAlign = 'center'; g.lineJoin = 'round';
   const x = V ? W / 2 : 210 * S, y0 = V ? H / 2 - 20 * S - (205 + 300 + 70) * QS - (righe.length - 1) * fs * 1.25 : H / 2 - 24 * S;
-  righe.forEach((s, i) => { const y = y0 + i * fs * 1.25; g.strokeStyle = 'rgba(251,246,234,.92)'; g.lineWidth = 7 * S; g.strokeText(s, x, y); g.fillStyle = VERM; g.fillText(s, x, y); g.strokeStyle = INK; g.lineWidth = 1.2 * S; g.strokeText(s, x, y); });
+  righe.forEach((s, i) => { const y = y0 + i * fs * 1.25; g.strokeStyle = 'rgba(251,246,234,.92)'; g.lineWidth = 7 * S; g.strokeText(s, x, y); g.fillStyle = VERM; g.fillText(s, x, y); g.strokeStyle = INK; g.lineWidth = 1.2 * S; g.strokeText(s, x, y);
+    if (MK) { MK.g.save(); MK.g.setTransform(1, 0, 0, 1, 0, 0); MK.g.globalCompositeOperation = 'destination-out'; MK.g.font = g.font; MK.g.textAlign = 'center'; MK.g.lineWidth = 9 * S; MK.g.strokeText(s, x, y); MK.g.fillText(s, x, y); MK.g.restore(); } });   // la luce dell'oro non schiarisce la scritta
   g.restore();
 }
 
@@ -155,11 +156,13 @@ function drawCard(g, sh, t) {
   const F = sh.fonte; if (!F) return; const a = cardAlpha(sh, t); if (a <= 0) return;
   const pad = 58 * S, maxW = V ? W - 2 * PX - 80 * S : W * .5;
   g.save();
-  g.font = `italic ${50 * S}px Garamond`; const lat = F.latino.map(r => r.split(' '));
-  g.font = `${36 * S}px Garamond`; const it = wrap(g, F.italiano, maxW - pad - 30 * S);
-  g.font = `500 ${23 * S}px Oswald`; g.letterSpacing = `${.14 * 23 * S}px`; const rif = wrap(g, F.rif.toUpperCase(), maxW - pad - 30 * S);
+  g.font = `italic ${50 * S}px Garamond`;
+  const righe = [].concat(...(F.latino || F.testo || []).map(r => wrap(g, r, maxW - pad - 30 * S)));   // le righe troppo lunghe vanno a capo
+  const lat = righe.map(r => r.split(' '));
+  g.font = `${36 * S}px Garamond`; const it = F.italiano ? wrap(g, F.italiano, maxW - pad - 30 * S) : [];
+  g.font = `500 ${23 * S}px Oswald`; g.letterSpacing = `${.14 * 23 * S}px`; const rif = F.rif ? wrap(g, F.rif.toUpperCase(), maxW - pad - 30 * S) : [];
   let wmax = 0; for (const r of rif) wmax = Math.max(wmax, g.measureText(r).width); g.letterSpacing = '0px';
-  g.font = `italic ${50 * S}px Garamond`; for (const r of F.latino) wmax = Math.max(wmax, g.measureText(r).width);
+  g.font = `italic ${50 * S}px Garamond`; for (const r of righe) wmax = Math.max(wmax, g.measureText(r).width);
   g.font = `${36 * S}px Garamond`; for (const r of it) wmax = Math.max(wmax, g.measureText(r).width);
   g.restore();
   const w = Math.min(maxW, wmax + pad + 62 * S), h = 50 * S + lat.length * 64 * S + it.length * 46 * S + rif.length * 34 * S + 44 * S;
@@ -311,7 +314,8 @@ function drawBanderole(g, t) {
   const A = subAt(t); if (!A || A.open <= 0) return;
   const s = A.s, open = A.open, B = bandLayout(g), lh = 52 * S;
   g.setTransform(1, 0, 0, 1, 0, 0);
-  const h = 82 * S + (B.n - 1) * lh, cx = W / 2, cy = V ? H - 300 * S - h / 2 : H - 108 * S - (B.n - 1) * lh / 2, hw = B.half * open;
+  const nr = Math.max(B.lines[SUBS.indexOf(s)].length, A.prev && t < s[0] ? B.lines[SUBS.indexOf(A.prev)].length : 1);   // altezza della frase in corso
+  const h = 82 * S + (nr - 1) * lh, cx = W / 2, cy = V ? H - 300 * S - h / 2 : H - 108 * S - (nr - 1) * lh / 2, hw = B.half * open;
   for (const sd of [-1, 1]) { const ex = cx + sd * hw; const tail = P2(q => { q.moveTo(ex - sd * 6 * S, cy - h / 2 + 18 * S); q.lineTo(ex + sd * 56 * S, cy - h / 2 + 28 * S); q.lineTo(ex + sd * 34 * S, cy + 4 * S); q.lineTo(ex + sd * 62 * S, cy + h / 2 + 18 * S); q.lineTo(ex - sd * 6 * S, cy + h / 2 - 6 * S); q.closePath(); });
     g.fillStyle = '#d8c69c'; g.fill(tail); rimShade(g, tail, '#a8926a', 8 * S); g.strokeStyle = INK; g.lineWidth = 3 * S; g.lineJoin = 'round'; g.stroke(tail);
     const fold = P2(q => { q.moveTo(ex - sd * 3 * S, cy + h / 2 - 6 * S); q.lineTo(ex - sd * 3 * S, cy + h / 2 + 12 * S); q.lineTo(ex + sd * 22 * S, cy + h / 2 + 2 * S); q.closePath(); }); g.fillStyle = '#8a7552'; g.fill(fold); g.lineWidth = 2 * S; g.stroke(fold); }
@@ -326,6 +330,21 @@ function drawBanderole(g, t) {
     const y0 = cy + 14 * S - (rows.length - 1) * lh / 2; rows.forEach((r, i) => g.fillText(r, cx, y0 + i * lh)); g.restore(); };
   if (A.prev && t < s[0]) write(A.prev, 1, 1 - ss(seg(t, s[0] - .25, s[0] - .02)));
   if (t >= s[0]) write(s, eo(seg(t, s[0], s[0] + .5)), 1);
+}
+
+// ---------------------------------------------------------------- cartello finale degli Shorts
+function drawFinale(g, t) {
+  const F = CFG.finale, a = ss(seg(t, F.t0 - .1, F.t0 + .45));
+  g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = a * .9; g.fillStyle = lapis(g); g.fillRect(PX, PY, PW, PH);
+  g.globalAlpha = a * .35; g.fillStyle = '#080a30'; g.fillRect(PX, PY, PW, PH); g.globalAlpha = a;
+  g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.font = `italic ${(V ? 78 : 70) * S}px Garamond`; g.fillStyle = '#f3e9d2'; g.shadowColor = 'rgba(0,0,0,.6)'; g.shadowBlur = 20 * S;
+  const dq = wrap(g, F.domanda, PW - 160 * S), lh = (V ? 96 : 86) * S, y0 = H * (V ? .42 : .4) - (dq.length - 1) * lh / 2;
+  dq.forEach((r, i) => g.fillText(r, W / 2, y0 + i * lh));
+  const u = seg(t, F.t0 + .35, F.t0 + .9); g.globalAlpha = a * u;
+  g.font = `600 ${(V ? 44 : 40) * S}px Oswald`; g.letterSpacing = `${.08 * 44 * S}px`; g.fillStyle = '#e8b04b';
+  const dr = wrap(g, F.riga, PW - 160 * S); dr.forEach((r, i) => g.fillText(r, W / 2, y0 + dq.length * lh + 50 * S + i * 58 * S));
+  g.letterSpacing = '0px'; g.restore();
 }
 
 // ---------------------------------------------------------------- un fotogramma
@@ -352,7 +371,7 @@ function render(tf) {
   drawSnow(ctx, tf, snow);
   const v = ctx.createRadialGradient(W * .5, H * .46, Math.min(W, H) * .5, W / 2, H / 2, Math.max(W, H) * .6); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(10,12,40,.28)');
   ctx.fillStyle = v; ctx.fillRect(PX, PY, PW, PH);
-  drawBanderole(ctx, tf);
+  if (CFG.finale && tf >= CFG.finale.t0 - .1) drawFinale(ctx, tf); else drawBanderole(ctx, tf);
   const black = clamp(1 - ss(seg(tf, 0, .8)) + ss(seg(tf, CFG.fade_out[0], CFG.fade_out[1])));
   if (black > 0) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = `rgba(0,0,0,${black})`; ctx.fillRect(0, 0, W, H); }
 }
