@@ -1,3 +1,4 @@
 uscita/
 .build_*/
 materiale/
+__pycache__/
