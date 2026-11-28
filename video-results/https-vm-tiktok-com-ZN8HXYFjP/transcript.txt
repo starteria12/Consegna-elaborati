@@ -1,0 +1,15 @@
+[00:00.00 - 00:04.96] There's a Claude skill called I Have ADHD that finally stops Claude from spamming you.
+[00:07.12 - 00:11.68] Okay, found the repo. Let's install this skill and it's ready to use. So without this I'm going to
+[00:11.68 - 00:16.08] ask Claude to explain how this code works. It's called I wrote a long time ago and it's pretty
+[00:16.08 - 00:20.72] complicated. Okay, we have an answer. I see I don't have ADHD but I hate these long responses
+[00:20.72 - 00:24.40] like look at it. It's still going it's not even done yet and usually what I end up doing is
+[00:24.40 - 00:28.88] just saying summarize this which is obviously not the most efficient way to do things. Even
+[00:28.88 - 00:33.92] the summary is also long. Okay, let's try the same thing with the I Have ADHD skill, paste the same
+[00:33.92 - 00:38.24] prompts and let's see what the output looks like for this one. Okay, I like the intro. In short,
+[00:38.24 - 00:42.88] this far reads photos and videos in the library, the pipeline in five stages. To be fair, this is
+[00:42.88 - 00:46.64] pretty good. I like how the answer to my question is at the start and then I can choose to
+[00:46.64 - 00:52.32] read more if I want to. Let me try another example, explain how my entire app works. Without
+[00:52.32 - 00:56.24] this I know the output literally take me like 10 minutes to read. So let's see how much better
+[00:56.24 - 01:00.72] this makes it. Okay, we have another response. Again, the summary of the output is at the start
+[01:00.72 - 01:04.80] and I can choose to read more if I want to. I don't have ADHD but I'm going to be using this one a lot
+[01:04.80 - 01:13.36] because it's a 100% fact.

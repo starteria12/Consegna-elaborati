@@ -1,0 +1,9 @@
+[00:00.00 - 00:03.44] Ti dico come ho risparmiato fino al 90% dei token su Cloud Code.
+[00:03.44 - 00:05.28] Allora il problema lo conosciamo tutti.
+[00:05.28 - 00:10.84] I Coding Agent leggono centinaia di file utilizzando i comandi base di Shell, come per esempio Git,
+[00:10.84 - 00:12.24] Grap, Cat.
+[00:12.24 - 00:14.16] Quindi l'output di questi comandi finisce specia per intero per l'output.
+[00:14.16 - 00:19.16] This tool, on the other hand, puts itself in the middle between the agent and the shell.
+[00:19.16 - 00:24.16] Intercept the command, execute it, compress the output and pass it back to the agent.
+[00:24.16 - 00:29.16] It installs itself with a single command and already works on all Coding Agent.
+[00:29.16 - 00:30.16] I leave you the link here.

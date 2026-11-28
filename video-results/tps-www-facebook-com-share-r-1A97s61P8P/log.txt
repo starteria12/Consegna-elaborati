@@ -1,0 +1,31 @@
+$ yt-dlp --no-playlist -f best[height<=1080]/best --write-info-json --write-subs --write-auto-subs --sub-langs all -o /tmp/tps-www-facebook-com-share-r-1A97s61P8P/video.%(ext)s https://www.facebook.com/share/r/1A97s61P8P/
+[generic] Extracting URL: https://www.facebook.com/share/r/1A97s61P8P/
+[generic] 1A97s61P8P: Downloading webpage
+[redirect] Following redirect to https://www.facebook.com/reel/1714605193395284/?rdid=U0LYysGyzslE4Oup&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1A97s61P8P%2F
+[facebook:reel] Extracting URL: https://www.facebook.com/reel/1714605193395284/?rdid=U0LYysGyzslE4Oup&share_url=https%3A%2F%2Fwww...%2Fr%2F1A97s61P8P%2F
+[facebook] Extracting URL: https://m.facebook.com/watch/?v=1714605193395284&_rdr
+[facebook] 1714605193395284: Downloading webpage
+[info] 1714605193395284: Downloading 1 format(s): hd
+[info] There are no subtitles for the requested languages
+[info] Writing video metadata as JSON to: /tmp/tps-www-facebook-com-share-r-1A97s61P8P/video.info.json
+[download] Destination: /tmp/tps-www-facebook-com-share-r-1A97s61P8P/video.mp4
+
+[download]   0.0% of    7.12MiB at  Unknown B/s ETA Unknown
+[download]   0.0% of    7.12MiB at  621.99KiB/s ETA 00:11  
+[download]   0.1% of    7.12MiB at    1.34MiB/s ETA 00:05
+[download]   0.2% of    7.12MiB at    2.76MiB/s ETA 00:02
+[download]   0.4% of    7.12MiB at    4.84MiB/s ETA 00:01
+[download]   0.9% of    7.12MiB at    6.22MiB/s ETA 00:01
+[download]   1.7% of    7.12MiB at    9.14MiB/s ETA 00:00
+[download]   3.5% of    7.12MiB at   13.26MiB/s ETA 00:00
+[download]   7.0% of    7.12MiB at   21.22MiB/s ETA 00:00
+[download]  14.0% of    7.12MiB at   35.31MiB/s ETA 00:00
+[download]  28.1% of    7.12MiB at   49.23MiB/s ETA 00:00
+[download]  56.2% of    7.12MiB at   56.80MiB/s ETA 00:00
+[download] 100.0% of    7.12MiB at   60.21MiB/s ETA 00:00
+[download] 100% of    7.12MiB in 00:00:00 at 42.40MiB/s  
+
+$ ffmpeg -loglevel error -i /tmp/tps-www-facebook-com-share-r-1A97s61P8P/video.mp4 -vf fps=0.5423,scale=720:-2 -q:v 4 /home/runner/work/Consegna-elaborati/Consegna-elaborati/video-results/tps-www-facebook-com-share-r-1A97s61P8P/frames/f_%03d.jpg
+
+$ ffmpeg -loglevel error -y -i /tmp/tps-www-facebook-com-share-r-1A97s61P8P/video.mp4 -vn -ac 1 -ar 16000 /tmp/tps-www-facebook-com-share-r-1A97s61P8P/audio.wav
+

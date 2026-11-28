@@ -1,0 +1,13 @@
+[00:00.00 - 00:05.40] You can create animated short films like the ones you're watching right now in over 50 different styles.
+[00:05.40 - 00:06.30] And the crazy part?
+[00:06.30 - 00:10.50] You don't need to spend a single dollar on expensive AI tools to make them.
+[00:10.50 - 00:13.10] First, you need to connect this free tool to Claude,
+[00:13.10 - 00:17.00] which can produce an entire video by drawing each frame through code,
+[00:17.00 - 00:21.80] composes the music, generates the voiceover, and adds sound effects automatically.
+[00:21.80 - 00:30.00] It also includes 59 ready-made visual styles across cinema, print, graphic design, games, anime, 3D, and more.
+[00:30.00 - 00:33.40] You can even adapt an existing style or build your own.
+[00:33.40 - 00:39.30] To get started, visit the repo, copy the git clone command, and paste it into Claude code.
+[00:39.30 - 00:40.90] Then describe the film you want.
+[00:40.90 - 00:46.80] For example, you could ask it to make a Claude code film in the style of a 1960s comic book pop art.
+[00:46.80 - 00:53.00] It creates the story, draws the shots, scores the music, adds the sound effects, and delivers the finished film.
+[00:53.00 - 00:55.20] Comment, film, and I'll send you the link.

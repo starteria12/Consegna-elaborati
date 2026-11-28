@@ -1,0 +1,36 @@
+$ yt-dlp --no-playlist -f best[height<=1080]/best --write-info-json --write-subs --write-auto-subs --sub-langs all -o /tmp/https-vm-tiktok-com-ZN8HX27pk/video.%(ext)s https://vm.tiktok.com/ZN8HX27pk/
+[vm.tiktok] Extracting URL: https://vm.tiktok.com/ZN8HX27pk/
+[vm.tiktok] ZN8HX27pk: Downloading webpage
+[TikTok] Extracting URL: https://www.tiktok.com/@ai.lessandrobrozzi/video/7693594061495700768?_r=1&_t=ZN-9BmzNujQPA6
+[TikTok] 7693594061495700768: Downloading webpage
+[info] 7693594061495700768: Downloading subtitles: ita-IT
+[info] 7693594061495700768: Downloading 1 format(s): bytevc1_540p_481358-1
+[info] Writing video subtitles to: /tmp/https-vm-tiktok-com-ZN8HX27pk/video.ita-IT.vtt
+[download] Destination: /tmp/https-vm-tiktok-com-ZN8HX27pk/video.ita-IT.vtt
+
+[download]  43.4% of    2.30KiB at  Unknown B/s ETA Unknown
+[download] 100.0% of    2.30KiB at  Unknown B/s ETA Unknown
+[download] 100% of    2.30KiB in 00:00:00 at 6.51KiB/s     
+[info] Writing video metadata as JSON to: /tmp/https-vm-tiktok-com-ZN8HX27pk/video.info.json
+[download] Destination: /tmp/https-vm-tiktok-com-ZN8HX27pk/video.mp4
+
+[download]   0.0% of    4.19MiB at  Unknown B/s ETA Unknown
+[download]   0.1% of    4.19MiB at    2.64MiB/s ETA 00:01  
+[download]   0.2% of    4.19MiB at    4.67MiB/s ETA 00:00
+[download]   0.3% of    4.19MiB at    8.72MiB/s ETA 00:00
+[download]   0.7% of    4.19MiB at   15.61MiB/s ETA 00:00
+[download]   1.5% of    4.19MiB at   10.62MiB/s ETA 00:00
+[download]   3.0% of    4.19MiB at   12.89MiB/s ETA 00:00
+[download]   5.9% of    4.19MiB at   17.79MiB/s ETA 00:00
+[download]  11.9% of    4.19MiB at   24.98MiB/s ETA 00:00
+[download]  23.8% of    4.19MiB at   34.57MiB/s ETA 00:00
+[download]  47.7% of    4.19MiB at   39.12MiB/s ETA 00:00
+[download]  95.4% of    4.19MiB at   65.61MiB/s ETA 00:00
+[download] 100.0% of    4.19MiB at   67.46MiB/s ETA 00:00
+[download] 100% of    4.19MiB in 00:00:00 at 20.49MiB/s  
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+
+$ ffmpeg -loglevel error -i /tmp/https-vm-tiktok-com-ZN8HX27pk/video.mp4 -vf fps=0.4106,scale=720:-2 -q:v 4 /home/runner/work/Consegna-elaborati/Consegna-elaborati/video-results/https-vm-tiktok-com-ZN8HX27pk/frames/f_%03d.jpg
+
+$ ffmpeg -loglevel error -y -i /tmp/https-vm-tiktok-com-ZN8HX27pk/video.mp4 -vn -ac 1 -ar 16000 /tmp/https-vm-tiktok-com-ZN8HX27pk/audio.wav
+

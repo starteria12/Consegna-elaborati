@@ -1,0 +1,11 @@
+[00:00.00 - 00:03.12] I'm building a new website for my app and this is the worst way to do it in
+[00:03.12 - 00:07.36] cloud code. You just type build me a website followed by your description and just submit that.
+[00:07.36 - 00:10.88] And here's the final result for my website. I mean this looks sick. Like this is amazing
+[00:10.88 - 00:13.84] animation. Look at that. But the only problem with this is that cloud ended up writing a
+[00:13.84 - 00:17.84] html file which is really annoying to publish and also keep up data. There's a better way to do it.
+[00:17.84 - 00:21.76] First add the framework mcp to cloud code so mine's connected right here. Now this time
+[00:21.76 - 00:25.44] I'll ask cloud code to build the website in framework and just paste the same prompt.
+[00:25.44 - 00:29.20] Okay it's done it's built it in framework so I just have to tap here to open the project
+[00:29.20 - 00:33.12] and here it is. The cool thing is I get to see what the desktop tablet and phone version looks like
+[00:33.12 - 00:38.48] and if I tap here I can preview what the animation looks like. Perfect. It also looks good and
+[00:38.48 - 00:42.08] now if I want to publish my website just tap this button and it's published. It's actually that easy.

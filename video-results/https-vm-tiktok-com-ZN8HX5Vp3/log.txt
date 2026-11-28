@@ -1,0 +1,37 @@
+$ yt-dlp --no-playlist -f best[height<=1080]/best --write-info-json --write-subs --write-auto-subs --sub-langs all -o /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.%(ext)s https://vm.tiktok.com/ZN8HX5Vp3/
+[vm.tiktok] Extracting URL: https://vm.tiktok.com/ZN8HX5Vp3/
+[vm.tiktok] ZN8HX5Vp3: Downloading webpage
+[TikTok] Extracting URL: https://www.tiktok.com/@superdealshoppa/video/7712619819446586657?_r=1&_t=ZN-9BmzMYLkYSc
+[TikTok] 7712619819446586657: Downloading webpage
+[info] 7712619819446586657: Downloading subtitles: eng-US
+[info] 7712619819446586657: Downloading 1 format(s): bytevc1_540p_363619-1
+[info] Writing video subtitles to: /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.eng-US.vtt
+[download] Destination: /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.eng-US.vtt
+
+[download]  18.0% of    5.55KiB at   42.19KiB/s ETA 00:00
+[download]  54.1% of    5.55KiB at  124.64KiB/s ETA 00:00
+[download] 100.0% of    5.55KiB at  227.55KiB/s ETA 00:00
+[download] 100% of    5.55KiB in 00:00:00 at 5.69KiB/s   
+[info] Writing video metadata as JSON to: /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.info.json
+[download] Destination: /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.mp4
+
+[download]   0.0% of    5.14MiB at  Unknown B/s ETA Unknown
+[download]   0.1% of    5.14MiB at  Unknown B/s ETA Unknown
+[download]   0.1% of    5.14MiB at    6.74MiB/s ETA 00:00  
+[download]   0.3% of    5.14MiB at   11.30MiB/s ETA 00:00
+[download]   0.6% of    5.14MiB at   18.92MiB/s ETA 00:00
+[download]   1.2% of    5.14MiB at   13.58MiB/s ETA 00:00
+[download]   2.4% of    5.14MiB at   14.49MiB/s ETA 00:00
+[download]   4.8% of    5.14MiB at   20.96MiB/s ETA 00:00
+[download]   9.7% of    5.14MiB at   30.17MiB/s ETA 00:00
+[download]  19.4% of    5.14MiB at   46.08MiB/s ETA 00:00
+[download]  38.9% of    5.14MiB at   31.03MiB/s ETA 00:00
+[download]  77.8% of    5.14MiB at   40.33MiB/s ETA 00:00
+[download] 100.0% of    5.14MiB at   33.67MiB/s ETA 00:00
+[download] 100% of    5.14MiB in 00:00:00 at 15.51MiB/s  
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+
+$ ffmpeg -loglevel error -i /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.mp4 -vf fps=0.2529,scale=720:-2 -q:v 4 /home/runner/work/Consegna-elaborati/Consegna-elaborati/video-results/https-vm-tiktok-com-ZN8HX5Vp3/frames/f_%03d.jpg
+
+$ ffmpeg -loglevel error -y -i /tmp/https-vm-tiktok-com-ZN8HX5Vp3/video.mp4 -vn -ac 1 -ar 16000 /tmp/https-vm-tiktok-com-ZN8HX5Vp3/audio.wav
+

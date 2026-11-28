@@ -1,0 +1,33 @@
+$ yt-dlp --no-playlist -f best[height<=1080]/best --write-info-json --write-subs --write-auto-subs --sub-langs all -o /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.%(ext)s https://vm.tiktok.com/ZN8HXuNC2/
+[vm.tiktok] Extracting URL: https://vm.tiktok.com/ZN8HXuNC2/
+[vm.tiktok] ZN8HXuNC2: Downloading webpage
+[TikTok] Extracting URL: https://www.tiktok.com/@devtipsita/video/7703983504052260129?_r=1&_t=ZN-9BmzKdGRwos
+[TikTok] 7703983504052260129: Downloading webpage
+[info] 7703983504052260129: Downloading subtitles: ita-IT
+[info] 7703983504052260129: Downloading 1 format(s): bytevc1_540p_292491-1
+[info] Writing video subtitles to: /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.ita-IT.vtt
+[download] Destination: /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.ita-IT.vtt
+
+[download] 100.0% of    905.00B at  Unknown B/s ETA Unknown
+[download] 100% of    905.00B in 00:00:00 at 2.10KiB/s     
+[info] Writing video metadata as JSON to: /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.info.json
+[download] Destination: /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.mp4
+
+[download]   0.1% of    1.05MiB at  Unknown B/s ETA Unknown
+[download]   0.3% of    1.05MiB at  Unknown B/s ETA Unknown
+[download]   0.6% of    1.05MiB at  Unknown B/s ETA Unknown
+[download]   1.4% of    1.05MiB at  Unknown B/s ETA Unknown
+[download]   2.9% of    1.05MiB at   24.86MiB/s ETA 00:00  
+[download]   5.8% of    1.05MiB at   14.47MiB/s ETA 00:00
+[download]  11.8% of    1.05MiB at   14.11MiB/s ETA 00:00
+[download]  23.6% of    1.05MiB at   21.43MiB/s ETA 00:00
+[download]  47.4% of    1.05MiB at   30.86MiB/s ETA 00:00
+[download]  94.9% of    1.05MiB at   47.46MiB/s ETA 00:00
+[download] 100.0% of    1.05MiB at   48.97MiB/s ETA 00:00
+[download] 100% of    1.05MiB in 00:00:00 at 3.74MiB/s   
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+
+$ ffmpeg -loglevel error -i /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.mp4 -vf fps=0.9934,scale=720:-2 -q:v 4 /home/runner/work/Consegna-elaborati/Consegna-elaborati/video-results/https-vm-tiktok-com-ZN8HXuNC2/frames/f_%03d.jpg
+
+$ ffmpeg -loglevel error -y -i /tmp/https-vm-tiktok-com-ZN8HXuNC2/video.mp4 -vn -ac 1 -ar 16000 /tmp/https-vm-tiktok-com-ZN8HXuNC2/audio.wav
+

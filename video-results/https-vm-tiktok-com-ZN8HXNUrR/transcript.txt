@@ -1,0 +1,40 @@
+[00:00.00 - 00:05.00] Google è on fire perché dopo il rilascio di Gemini Carbon
+[00:05.00 - 00:11.00] ha adesso rilasciato Gemini 4 Hydrogen, quindi continua con gli elementi della tavola periodica.
+[00:11.00 - 00:18.00] Questo modello va a sostituire praticamente il 3.8 Flash, quindi un modello veloce e rapido,
+[00:18.00 - 00:25.00] intelligente ma non ai livelli di Carbon, e di fatti lo paragonano a Sonnet 5.5 e al GPT 6.1 Terra.
+[00:25.00 - 00:31.00] Di fatti, artificial analysis, che è il benchmark indipendente, gli dà 54 punti posizionando
+[00:31.00 - 00:37.00] proprio in mezzo fra il 6.1 Terra e il Sonnet 5.5, che è quello che utilizzo io nel quotidiano.
+[00:37.00 - 00:43.00] Ed è anche un modello economico, un $50 in input, $7.50 per milioni token in output.
+[00:43.00 - 00:48.00] Comparando Gemini 4 Carbon, che è il modello più potente rispetto al 4 Hydrogen,
+[00:48.00 - 00:52.00] vediamo che l'output più o meno è simile, ma il costo praticamente è di mezzato,
+[00:52.00 - 00:57.00] $4.27 per Hydrogen, $8 e passa per Carbon.
+[00:57.00 - 01:02.00] E anche i tempi di risposta sono praticamente la metà, 1.23 contro le 2.39.
+[01:02.00 - 01:06.00] Ed io l'ho già implementato nella piattaforma agentica della mia accademia.
+[01:06.00 - 01:09.00] E ti mostro quanto è veloce, apro una nuova chat.
+[01:09.00 - 01:13.00] In che lezione Workshop Simone parla dei constraint decoding model,
+[01:13.00 - 01:19.00] adesso la gente cerca e utilizza tutti i tool per accedere ai corsi, ai workshop,
+[01:19.00 - 01:21.00] ai messaggi, ai canali dell'accademia.
+[01:21.00 - 01:27.00] Ed ecco qua che ha trovato quella che è la live del 2010-2016, dal minuto 22.42,
+[01:27.00 - 01:31.00] ha trovato quest'altro workshop solution model e ha trovato appunto
+[01:31.00 - 01:35.00] la lezione del corso Java 360, lezione numero 14,
+[01:35.00 - 01:39.00] che introduce i constraint decoding model.
+[01:39.00 - 01:45.85] Poi questi si possono vedere live direttamente in piattaforma.
+[01:45.85 - 01:52.42] Ecco qua che infatti presento questi constraint decoding model.
+[01:52.42 - 01:56.42] Ed altra cosa figa che ha fatto Google è il rilascio delle decisione API.
+[01:56.42 - 01:58.42] Anche loro puntano su decision model.
+[01:58.42 - 02:03.42] Ecco qua Gemini decision API hanno praticamente copiato Java,
+[02:03.42 - 02:08.42] però facendo lo multimodale, c'ha testo, immagini PDF, audio, video
+[02:08.42 - 02:13.42] e in output appunto ti risponde con delle decisioni, non genera token.
+[02:13.42 - 02:16.42] Lato performance addirittura detta loro supera quello che è Java.
+[02:16.42 - 02:20.42] E vediamo subito che puntano su esempi multimodali di visione
+[02:20.42 - 02:26.42] soprattutto in ambito di robotica, telecamere, diciamo, mondo fisico.
+[02:26.42 - 02:30.42] Quindi avevo previsto correttamente questa nuova famiglia di modelli
+[02:30.42 - 02:32.42] che si andavano a creare che sono decision model.
+[02:32.42 - 02:37.42] Open è rilasciato suo, per Plexity ha fatto l'altro Cloudflare.
+[02:37.42 - 02:39.42] Adesso abbiamo anche Google.
+[02:39.42 - 02:42.42] E noi non siamo da meno perché abbiamo la nostra versione open source
+[02:42.42 - 02:45.42] che si chiama Rizzoflo, che ha quasi raggiunto a mille stelle su GitHub.
+[02:45.42 - 02:48.42] Google finalmente è competitiva, sta rilasciando modelli
+[02:48.42 - 02:53.42] ed aggiornamenti sui modelli con una frequenza già molto più alta, sono contento.
+[02:53.42 - 02:55.42] Favi sapere con un commento qua sotto cosa ne pensi
+[02:55.42 - 02:58.42] e seguimi per rimanere aggiornati al mondo delle AI. Ciao!
