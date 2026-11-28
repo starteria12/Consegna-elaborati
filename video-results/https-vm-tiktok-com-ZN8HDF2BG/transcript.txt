@@ -1,0 +1,19 @@
+[00:00.00 - 00:04.00] This free AI tool turns your cloud code into literally a full production studio.
+[00:04.00 - 00:06.88] It basically works just like a real production team with a researcher,
+[00:06.88 - 00:10.08] a script writer, a voice artist, and even an editor all run by AI.
+[00:12.08 - 00:15.60] Okay, found the repo and now we install it and it's ready to use.
+[00:15.60 - 00:19.20] And it's not free, of course. I need a file account to do the AI video generation.
+[00:19.20 - 00:21.60] Oh my god, I'm going to have to risk my money on another video.
+[00:21.60 - 00:24.40] Okay, I've created a file account and added $10 to it.
+[00:24.40 - 00:28.08] To test it, we're going to ask it to create a cinematic trailer for Factor Hype
+[00:28.08 - 00:31.68] and I've added a picture of myself. So now production team is off to work.
+[00:31.68 - 00:35.28] Okay, and it's ready. Before we see the output, let's look at how much it costs.
+[00:35.28 - 00:40.16] So in Claude, this session costs $12 and the video generation costs $9.41.
+[00:40.16 - 00:42.24] So just better be good. Let's play it.
+[00:42.24 - 00:44.64] AI just killed video editor.
+[00:44.64 - 00:48.24] AI just killed interior designer.
+[00:48.24 - 00:51.20] AI just killed video editor.
+[00:51.20 - 00:56.03] They all promised to change everything.
+[00:56.03 - 00:58.51] So I tested every single one.
+[00:59.47 - 01:09.71] It's pretty good.
+[01:09.71 - 01:13.71] Considering I only put a simple prompt and I got this, I'm going to have to give this a fact, guys.
