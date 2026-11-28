@@ -1,0 +1,18 @@
+[00:00.00 - 00:03.52] You can now make viral animated reels in seconds with Claude code.
+[00:03.56 - 00:07.44] Nobody edited or animated this because every single frame of it was written in
+[00:07.44 - 00:11.28] code by Claude. It's a free Github project called Claude faceless shorts
+[00:11.28 - 00:14.28] creator with five skills that teach Claude how to make a short.
+[00:14.36 - 00:16.30] So you just clone it and run one install.
+[00:16.30 - 00:19.84] And as soon as you open the folder in Claude code, it picks up all five skills.
+[00:19.92 - 00:23.12] Then you add your 11 labs key for the voice and the captions land on the
+[00:23.12 - 00:25.96] exact word that's being spoken. Now you give it one sentence,
+[00:25.96 - 00:29.32] like make a short about the water cycle for kids and it writes the plan
+[00:29.32 - 00:30.52] first. Once you say go,
+[00:30.52 - 00:33.40] it'll animate every scene and check the frames at phone size.
+[00:33.48 - 00:35.80] And then it adds the voice and renders the finished video.
+[00:35.84 - 00:37.00] And if you want a specific look,
+[00:37.04 - 00:40.44] it's 2d animation skill has styles built in like Memphis,
+[00:40.48 - 00:42.44] neo brutalism or glass morphism.
+[00:42.48 - 00:44.48] So instead of paying an editor for every short,
+[00:44.48 - 00:47.28] you just type one sentence and it builds the whole thing for you.
+[00:47.32 - 00:49.32] Comment shorts to get all five skills.
